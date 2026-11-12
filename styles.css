@@ -39,7 +39,6 @@ button:disabled { cursor: default; opacity: .65; }
 .hero { color: #f4f4e8; background: var(--pine); }
 .hero-inner { display: grid; grid-template-columns: 1.12fr .82fr; align-items: center; gap: clamp(25px, 6vw, 94px); padding: clamp(30px, 5.5vw, 70px) 0; }
 .event-label { color: var(--lime); font-size: clamp(12px, 1.15vw, 15px); line-height: 1.5; letter-spacing: .04em; font-weight: 700; }
-.event-label span { margin-inline: 3px; }
 .hero h1 { margin-block: 17px 20px; font-size: clamp(45px, 6.25vw, 86px); line-height: 1.04; letter-spacing: -.085em; font-weight: 900; }
 .hero h1 em { font-style: normal; color: var(--lime); }
 .hero-copy > p:last-child { color: #d3d9c9; font-size: clamp(14px, 1.3vw, 17px); line-height: 1.75; letter-spacing: -.022em; }

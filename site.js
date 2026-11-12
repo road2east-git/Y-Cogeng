@@ -54,7 +54,7 @@ function invalidateAttempt() {
 function showSelection() {
   const photoText = entries.photo.length ? `사진 ${entries.photo.length}장` : '';
   const videoText = entries.video.length ? '영상 1개' : '';
-  selection.textContent = [photoText, videoText].filter(Boolean).join(' · ') || '선택한 파일 없음';
+  selection.textContent = [photoText, videoText].filter(Boolean).join(', ') || '선택한 파일 없음';
 }
 
 function photoFields(entry) {
@@ -62,7 +62,7 @@ function photoFields(entry) {
   group.className = 'photo-fields';
   const prompts = [
     {name: 'year', label: '촬영연도', placeholder: '예. 2016', max: 20},
-    {name: 'place', label: '장소·행사', placeholder: '예. HCI 학회', max: 100},
+    {name: 'place', label: '장소 또는 행사', placeholder: '예. HCI 학회', max: 100},
     {name: 'people', label: '등장인물', placeholder: '기억나는 이름을 적어주세요', max: 160},
     {name: 'memory', label: '짧은 에피소드', placeholder: '그날 기억나는 일이 있다면 적어주세요', max: 300},
   ];
@@ -142,7 +142,7 @@ function addFiles(files, kind) {
       continue;
     }
     if (!file.size || file.size > fileLimit) {
-      messages.add(`용량을 확인해 주세요. ${kind === 'photo' ? '사진은 한 장당 25 MB' : '영상은 250 MB'}까지 받을 수 있습니다.`);
+      messages.add('이 파일을 추가할 수 없습니다. 다른 파일을 선택해 주세요.');
       continue;
     }
     if (kind === 'photo' && entries.photo.length >= limits.photoCount) {
@@ -245,7 +245,7 @@ async function sendSubmission(files, sender) {
   for (const [index, {file}] of files.entries()) {
     const parts = attempt.parts[index];
     const partCount = Math.ceil(file.size / limits.partBytes);
-    uploadMessage.textContent = `파일 보내는 중 · ${index + 1} / ${files.length}`;
+    uploadMessage.textContent = `파일 보내는 중 (${index + 1} / ${files.length})`;
     for (let partIndex = 0; partIndex < partCount; partIndex += 1) {
       const start = partIndex * limits.partBytes;
       const part = file.slice(start, start + limits.partBytes);
