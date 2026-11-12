@@ -56,7 +56,7 @@ fieldset { padding: 0; margin: 0; border: 0; min-width: 0; }
 .identity label, .photo-fields label { min-width: 0; font-size: 13px; font-weight: 700; }
 .required, .optional { color: var(--muted); font-size: 11px; font-weight: 500; margin-left: 4px; }
 .required { color: #53653d; }
-.identity input, .photo-fields input, .photo-fields textarea { display: block; width: 100%; margin-top: 7px; min-height: 44px; border: 1px solid #c4ccbc; border-radius: 8px; background: #fff; padding: 9px 11px; font-size: 14px; color: #242d23; }
+.identity input, .identity textarea, .photo-fields input, .photo-fields textarea { display: block; width: 100%; margin-top: 7px; min-height: 44px; border: 1px solid #c4ccbc; border-radius: 8px; background: #fff; padding: 9px 11px; font-size: 14px; color: #242d23; }
 input::placeholder, textarea::placeholder { color: #636c5e; }
 .media-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 17px; }
 .media { min-width: 0; padding: 20px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
@@ -87,7 +87,7 @@ fieldset:disabled .drop { cursor: default; opacity: .68; }
 .photo-fields { display: grid; grid-template-columns: .75fr 1.25fr; gap: 8px 10px; margin-top: 12px; }
 .photo-fields label:nth-child(n + 3) { grid-column: 1 / -1; }
 .photo-fields input, .photo-fields textarea { margin-top: 4px; min-height: 38px; font-size: 13px; }
-.photo-fields textarea { resize: vertical; }
+.identity textarea, .photo-fields textarea { resize: vertical; }
 .media-error, .notice { margin-top: 11px; color: #803923; font-size: 13px; line-height: 1.55; }
 .notice { padding: 13px 15px; border: 1px solid #dfbcae; border-radius: 9px; background: #fff2ec; }
 .submission-bar { display: flex; justify-content: space-between; align-items: center; gap: 13px; margin-top: 18px; }
