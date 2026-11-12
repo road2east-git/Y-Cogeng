@@ -32,8 +32,6 @@ async function checkIntake() {
 
 if (localPreview) {
   document.querySelector('#local-preview').hidden = false;
-  const onlineIntake = document.querySelector('#online-intake');
-  document.querySelector('#organizer-link').href = new URL('/organizer', externalApi || onlineIntake.href).href;
 } else if (externalApi) {
   checkIntake();
 } else {

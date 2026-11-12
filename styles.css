@@ -107,8 +107,6 @@ fieldset:disabled .drop { cursor: default; opacity: .68; }
 .success button { margin-top: 19px; }
 .footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
 .footer .shell { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; padding-block: 21px; }
-.footer-actions { display: flex; align-items: center; gap: 16px; }
-.footer a { white-space: nowrap; text-underline-offset: 3px; }
 
 body:has(.invitation-dialog[open]) { overflow: hidden; }
 .invitation-dialog { width: min(740px, calc(100% - 24px)); max-width: none; max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); padding: 0; overflow: auto; overscroll-behavior: contain; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); color: inherit; }
