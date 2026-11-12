@@ -310,3 +310,9 @@ document.querySelector('#send-more').addEventListener('click', () => {
   form.hidden = false;
   document.querySelector('#sender-name').focus();
 });
+
+const invitationDialog = document.querySelector('#invitation-dialog');
+document.querySelector('#invitation-open')?.addEventListener('click', () => {
+  invitationDialog.showModal();
+  invitationDialog.scrollTop = 0;
+});

@@ -106,8 +106,17 @@ fieldset:disabled .drop { cursor: default; opacity: .68; }
 .success p { font-size: 14px; color: var(--muted); }
 .success button { margin-top: 19px; }
 .footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
-.footer .shell { display: flex; justify-content: space-between; gap: 14px; padding-block: 21px; }
+.footer .shell { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; padding-block: 21px; }
+.footer-actions { display: flex; align-items: center; gap: 16px; }
 .footer a { white-space: nowrap; text-underline-offset: 3px; }
+
+body:has(.invitation-dialog[open]) { overflow: hidden; }
+.invitation-dialog { width: min(740px, calc(100% - 24px)); max-width: none; max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); padding: 0; overflow: auto; overscroll-behavior: contain; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); color: inherit; }
+.invitation-dialog::backdrop { background: rgba(13, 20, 12, .72); }
+.invitation-header { position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 16px; border-bottom: 1px solid var(--line); background: var(--paper); }
+.invitation-header h2 { font-size: 20px; }
+.invitation-pages img { display: block; width: 100%; height: auto; }
+.invitation-pages img + img { border-top: 1px solid var(--line); }
 
 .organizer { padding-block: 42px; }
 .organizer h1 { font-size: clamp(30px, 5vw, 54px); letter-spacing: -.065em; }

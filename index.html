@@ -17,9 +17,9 @@
   <meta property="og:image:height" content="630">
   <title>함께한 순간을 보내주세요 | 한광희 교수님 감사의 밤</title>
   <link rel="icon" href="./assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="./styles.css?v=4">
+  <link rel="stylesheet" href="./styles.css?v=5">
   <script src="./media-rules.js" defer></script>
-  <script src="./site.js" defer></script>
+  <script src="./site.js?v=5" defer></script>
 </head>
 <body>
   <a class="skip" href="#submit-materials">자료 제출로 건너뛰기</a>
@@ -109,6 +109,25 @@
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="shell"><p>연세대학교 심리학과 / 인지과학협동과정 인지공학연구실</p><a id="organizer-link" href="https://dr-han-event.frizzyebony8.chatgpt.site/organizer">준비위원</a></div></footer>
+  <footer class="footer">
+    <div class="shell">
+      <p>연세대학교 심리학과 / 인지과학협동과정 인지공학연구실</p>
+      <div class="footer-actions">
+        <button class="secondary" id="invitation-open" type="button" aria-haspopup="dialog" aria-controls="invitation-dialog">초대장 보기</button>
+        <a id="organizer-link" href="https://dr-han-event.frizzyebony8.chatgpt.site/organizer">준비위원</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="invitation-dialog" id="invitation-dialog" aria-labelledby="invitation-title">
+    <div class="invitation-header">
+      <h2 id="invitation-title">초대장</h2>
+      <form method="dialog"><button class="secondary" type="submit" autofocus>닫기</button></form>
+    </div>
+    <div class="invitation-pages">
+      <img src="./assets/invitation.png" width="1440" height="2480" loading="lazy" alt="한광희 교수님 정년퇴임 기념 감사의 밤 초대장. 2026년 12월 13일 일요일 오후 6시, 연세대학교 백양누리 최영홀.">
+      <img src="./assets/directions.png" width="1440" height="2480" loading="lazy" alt="연세대학교 백양누리 최영홀 오시는 길과 주차 안내">
+    </div>
+  </dialog>
 </body>
 </html>
